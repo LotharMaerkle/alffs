@@ -1,0 +1,18 @@
+Source: alffs
+Section: utils
+Priority: extra
+Maintainer: Lothar Maerkle <lothar.maerkle@ecm4u.de>
+Build-Depends: debhelper (>= 8.0.0), libfuse-dev, libcurl4-openssl-dev, libjson0-dev, libattr1-dev, uthash-dev
+Standards-Version: 3.9.2
+Homepage: http://alffs.org
+#Vcs-Git: git://git.debian.org/collab-maint/jshon.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/jshon.git;a=summary
+
+Package: alffs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libfuse, libcurl4-openssl, libjson0, libattr1 
+Description: Mount a remote Alfresco DMS with FUSE using HTTP for transport.
+ A filesystem projection of the Alfresco DMS. Interact with the Alfresco repository
+ using standard filesystem operations. Browse the repository contents, manage files, 
+ do bulk import operations and access metadata just with the unix standard tools and its
+ built in powers.

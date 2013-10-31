@@ -1,0 +1,5 @@
+alffs (0.1-alpha) precise; urgency=low
+
+  * Initial release of the alffs debian package 
+
+ -- Lothar Maerkle <lothar.maerkle@ecm4u.de>  Thu, 10 Jun 2013 13:26:23 -0800
