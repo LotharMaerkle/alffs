@@ -13,6 +13,8 @@ Turn off syslog rate limiting:
 add $SystemLogRateLimitInterval 0 to /etc/rsyslog.conf
 
 Use cases:
+=========
+
 * common standard file management
 * access and modify metadata with extended attributes
 * TODO: map any store as filesystem as a better node browser 
