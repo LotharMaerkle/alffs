@@ -1,0 +1,66 @@
+next:
+* cache housekeeping
+* handle created and modified dated in stats and mtime calls
+* delete sec. assocs if approbrate
+* support hardlinks: hardlinks will become secondaries
+* support symlinks: symlinks will become alfresco links
+
+
+general:
+* create a test exec
+* provide debs
+
+client and server:
+* allow assoc driven projection of any store so that it can be used as a general powerfull read write node browser
+* df in linux gives differnt sizes on avail (greater)
+* always return errno on errors from alf
+* show stat birth time
+* API permissions call (and mapping)
+* handle MLText properties in xattr set
+* switch from paths to filehandles and let filehandles point to noderefs
+* server side traversal fails if filename looks like a guid (PathUtils bug)
+* add valgrind helper script
+* curl ssl support options
+* factor path and base checking out
+* return bytes read and written
+* support binary content for setxattr and getxattr for d:content type properties
+* mimetype always octet-stream with rsync?
+* logging levels
+* write_buf so that > 4k blocks could be written to
+* reuse curl handle to reuse http connection
+* merge alf_open and alf_create
+* add cache buster support
+* add proxy support
+ readdir could cache dirent with whole getattrs so that not a http call for each file has to be done
+* use xattr user. prefix according to linux xattr semantics
+
+postponed:
+* use bson in favor of json --> no bson package in ubuntu yet, only as part of mongodb
+* rsync:  mkstemp "/mnt/alf/test-1/AlfIO/config-repo/alfresco/module/ecm4u_io/.web-client-config.xml.GVR2SK" failed: Function not implemented (38) --> no support for mkstemp in fuse
+
+done:
+* reuse connections
+* cleanup handle cache on exit
+* refcounting opens
+* directory handling mkdir, rmdir
+* unkonw property ex with getxattr securiy.selinux -> EIO
+* metadata as extended attributes
+* listxattr just with keys
+* speedup getxattr test for alf. prefix to avoid network roundtrip
+* init all local vars on the stack
+* open has to create a file so that following read or write is successful
+* unlink segfaults
+* statfs
+* simple local caching:
+* simple write optimization: download file on open, write data to local file, upload file on close 
+* fuse set times API call
+* rsync: failed to set times on "/mnt/alf/test-1/AlfIO/source/java/de/ecm4u/alfresco": Function not implemented (38)
+* support libreoffice writer
+* support libreoffice calc
+* support libreoffice impress
+* bug in rsync --inplace add extra control chars
+* truncate refcounted opens local cache support
+* track utimes at wip file and sync timestamps in final remote update in release
+
+
+
