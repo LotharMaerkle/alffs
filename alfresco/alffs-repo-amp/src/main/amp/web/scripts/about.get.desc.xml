@@ -1,9 +1,0 @@
-<webscript>
-	<shortname>io Module about</shortname>
-	<description>Displays information about the module
-	</description>
-	<url>/ecm4u/io/about</url>
-	<authentication>user</authentication>
-	<format default="html">argument</format>
-	<family>ecm4u/io</family>
-</webscript>

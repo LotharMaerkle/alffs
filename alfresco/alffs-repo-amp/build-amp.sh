@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mvn -Dmaven.test.skip=true package
+mvn -Dmaven.test.skip=true clean package
 
 (
 cd target

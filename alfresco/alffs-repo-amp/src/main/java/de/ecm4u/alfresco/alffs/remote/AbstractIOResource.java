@@ -142,6 +142,10 @@ public abstract class AbstractIOResource extends AbstractWebScript {
 		List<String> parts = new ArrayList<String>(Arrays.asList(StringUtils
 				.split(path, "/")));
 
+		if(StringUtils.isEmpty(path) || path.equals("/") || parts.isEmpty()) {
+			return getCompanyHome();
+		}
+		
 		FileInfo resolveNamePath;
 		try {
 			resolveNamePath = serviceRegistry.getFileFolderService()

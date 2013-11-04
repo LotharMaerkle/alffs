@@ -2,51 +2,51 @@
 <!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
 
 <beans>
-	<bean id="webscript.ecm4u.io.stat.get" class="de.ecm4u.alfresco.io.StatResource">
+	<bean id="webscript.ecm4u.alffs.stat.get" class="de.ecm4u.alfresco.alffs.remote.StatResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.statfs.get" class="de.ecm4u.alfresco.io.StatFSResource">
+	<bean id="webscript.ecm4u.alffs.statfs.get" class="de.ecm4u.alfresco.alffs.remote.StatFSResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 		<property name="store" ref="fileContentStore"/>
 	</bean>
-	<bean id="webscript.ecm4u.io.readdir.get" class="de.ecm4u.alfresco.io.ReadDirResource">
+	<bean id="webscript.ecm4u.alffs.readdir.get" class="de.ecm4u.alfresco.alffs.remote.ReadDirResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.create.post" class="de.ecm4u.alfresco.io.CreateResource">
+	<bean id="webscript.ecm4u.alffs.create.post" class="de.ecm4u.alfresco.alffs.remote.CreateResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.open.post" class="de.ecm4u.alfresco.io.OpenResource">
+	<bean id="webscript.ecm4u.alffs.open.post" class="de.ecm4u.alfresco.alffs.remote.OpenResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.truncate.post" class="de.ecm4u.alfresco.io.TruncateResource">
+	<bean id="webscript.ecm4u.alffs.truncate.post" class="de.ecm4u.alfresco.alffs.remote.TruncateResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.rename.post" class="de.ecm4u.alfresco.io.RenameResource">
+	<bean id="webscript.ecm4u.alffs.rename.post" class="de.ecm4u.alfresco.alffs.remote.RenameResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.utimens.post" class="de.ecm4u.alfresco.io.UTimeNSResource">
-		<property name="serviceRegistry" ref="ServiceRegistry" />
-		<property name="behaviourFilter" ref="policyBehaviourFilter" />
-	</bean>
-	<bean id="webscript.ecm4u.io.write.put" class="de.ecm4u.alfresco.io.WriteResource">
+	<bean id="webscript.ecm4u.alffs.utimens.post" class="de.ecm4u.alfresco.alffs.remote.UTimeNSResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 		<property name="behaviourFilter" ref="policyBehaviourFilter" />
 	</bean>
-	<bean id="webscript.ecm4u.io.read.get" class="de.ecm4u.alfresco.io.ReadResource">
+	<bean id="webscript.ecm4u.alffs.write.put" class="de.ecm4u.alfresco.alffs.remote.WriteResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="behaviourFilter" ref="policyBehaviourFilter" />
+	</bean>
+	<bean id="webscript.ecm4u.alffs.read.get" class="de.ecm4u.alfresco.alffs.remote.ReadResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.unlink.delete" class="de.ecm4u.alfresco.io.UnlinkResource">
+	<bean id="webscript.ecm4u.alffs.unlink.delete" class="de.ecm4u.alfresco.alffs.remote.UnlinkResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="webscript.ecm4u.io.rmdir.delete" class="de.ecm4u.alfresco.io.RmdirResource">
+	<bean id="webscript.ecm4u.alffs.rmdir.delete" class="de.ecm4u.alfresco.alffs.remote.RmdirResource">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 	</bean>
-	<bean id="ecm4u.io.XAttrParent" class="de.ecm4u.alfresco.io.XAttributeResource"
+	<bean id="ecm4u.alffs.XAttrParent" class="de.ecm4u.alfresco.alffs.remote.XAttributeResource"
 		abstract="true">
 		<property name="serviceRegistry" ref="ServiceRegistry" />
 		<property name="behaviourFilter" ref="policyBehaviourFilter" />
 	</bean>
-	<bean id="webscript.ecm4u.io.xattr.delete" parent="ecm4u.io.XAttrParent" />
-	<bean id="webscript.ecm4u.io.xattr.get" parent="ecm4u.io.XAttrParent" />
-	<bean id="webscript.ecm4u.io.xattr.post" parent="ecm4u.io.XAttrParent" />
+	<bean id="webscript.ecm4u.alffs.xattr.delete" parent="ecm4u.alffs.XAttrParent" />
+	<bean id="webscript.ecm4u.alffs.xattr.get" parent="ecm4u.alffs.XAttrParent" />
+	<bean id="webscript.ecm4u.alffs.xattr.post" parent="ecm4u.alffs.XAttrParent" />
 </beans>
