@@ -1,0 +1,10 @@
+<webscript>
+	<shortname>io Module about</shortname>
+	<description>Displays information about the module
+	</description>
+	<url>/alffs/stat</url>
+	<authentication>user</authentication>
+	<format default="html">argument</format>
+	<family>alffs</family>
+	<transaction allow="readonly">required</transaction>
+</webscript>
