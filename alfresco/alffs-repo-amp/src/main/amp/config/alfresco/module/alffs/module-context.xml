@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+	<bean id="webscript.ecm4u.io.stat.get" class="de.ecm4u.alfresco.io.StatResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.statfs.get" class="de.ecm4u.alfresco.io.StatFSResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="store" ref="fileContentStore"/>
+	</bean>
+	<bean id="webscript.ecm4u.io.readdir.get" class="de.ecm4u.alfresco.io.ReadDirResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.create.post" class="de.ecm4u.alfresco.io.CreateResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.open.post" class="de.ecm4u.alfresco.io.OpenResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.truncate.post" class="de.ecm4u.alfresco.io.TruncateResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.rename.post" class="de.ecm4u.alfresco.io.RenameResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.utimens.post" class="de.ecm4u.alfresco.io.UTimeNSResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="behaviourFilter" ref="policyBehaviourFilter" />
+	</bean>
+	<bean id="webscript.ecm4u.io.write.put" class="de.ecm4u.alfresco.io.WriteResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="behaviourFilter" ref="policyBehaviourFilter" />
+	</bean>
+	<bean id="webscript.ecm4u.io.read.get" class="de.ecm4u.alfresco.io.ReadResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.unlink.delete" class="de.ecm4u.alfresco.io.UnlinkResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="webscript.ecm4u.io.rmdir.delete" class="de.ecm4u.alfresco.io.RmdirResource">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+	<bean id="ecm4u.io.XAttrParent" class="de.ecm4u.alfresco.io.XAttributeResource"
+		abstract="true">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="behaviourFilter" ref="policyBehaviourFilter" />
+	</bean>
+	<bean id="webscript.ecm4u.io.xattr.delete" parent="ecm4u.io.XAttrParent" />
+	<bean id="webscript.ecm4u.io.xattr.get" parent="ecm4u.io.XAttrParent" />
+	<bean id="webscript.ecm4u.io.xattr.post" parent="ecm4u.io.XAttrParent" />
+</beans>
