@@ -33,8 +33,7 @@ Try it out yourself
 Note on the Alfresco modules
 ============================
 
-The required Alfresco module is currently not provided because it contains (simple but convenient)
-non-Free parts that needs to be replaced first.
+Go the directory alfrescp/alffs-repo-amp and use the script build-repo-amp.sh to create the repository side AMP which needs to be installed to Alfresco.
 
 Dependencies for building
 =========================

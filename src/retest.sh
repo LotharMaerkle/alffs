@@ -28,7 +28,7 @@ then
   sudo umount $ALF_MOUNTPOINT
 fi
 
-sudo ./alf $@ -oallow_other,big_writes,max_write=$ALF_MAX_WRITE,max_read=$ALF_MAX_READ,uid=`id -u`,gid=`id -g`,alfuserid=$ALF_USER,alfpassword=$ALF_PASSWORD,alfprotocol=$ALF_PROTOCOL,alfhost=$ALF_HOST,alfport=$ALF_PORT,alfiobase=/alfresco/service/ecm4u/io,alfmountbase=workspace://SpacesStore/app:company_home,alftimeout=100,alfcachedir=/tmp,alfconcachemax=$ALF_CONN_CACHE,alfhksleep=$ALF_HK_SLEEP,alfhkcachemax=$ALF_HK_CACHE_MAX $ALF_MOUNTPOINT
+sudo ./alf $@ -oallow_other,big_writes,max_write=$ALF_MAX_WRITE,max_read=$ALF_MAX_READ,uid=`id -u`,gid=`id -g`,alfuserid=$ALF_USER,alfpassword=$ALF_PASSWORD,alfprotocol=$ALF_PROTOCOL,alfhost=$ALF_HOST,alfport=$ALF_PORT,alfiobase=/alfresco/service/alffs,alfmountbase=workspace://SpacesStore/app:company_home,alftimeout=100,alfcachedir=/tmp,alfconcachemax=$ALF_CONN_CACHE,alfhksleep=$ALF_HK_SLEEP,alfhkcachemax=$ALF_HK_CACHE_MAX $ALF_MOUNTPOINT
 
 #sudo ls $ALF_MOUNTPOINT
 
