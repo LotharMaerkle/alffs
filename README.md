@@ -10,14 +10,20 @@ Use cases
 * access and modify metadata with extended attributes
 * TODO: map any store as filesystem as a better node browser 
 
+Try out
+=======
+
+* see the drops directory for pre-build AMPs for the Alfresco part
+
+
 Building
 ========
 
 There is no automake setup (yet). It feels so overkill to have all that complicated automake stuff
 for one source file. To simplify this, a simple script make.sh is provided that compiles the module.
 
-Try it out
-==========
+Try it out yourself
+===================
 
 * check out the project with git
 * install the missing libraries below
